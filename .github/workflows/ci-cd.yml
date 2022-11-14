@@ -23,7 +23,7 @@ jobs:
         run: hugo --gc --minify
       - name: Upload public directory # Upload /public artifact if on `main` branch
         uses: actions/upload-artifact@v2
-        if: github.ref == 'refs/heads/main'
+        if: github.ref == 'refs/heads/dev'
         with:
           name: public
           path: public/
