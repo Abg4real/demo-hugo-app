@@ -2,13 +2,12 @@ name: CI/CD
 
 on:
   push:
-      branches: 
+    branches: 
         - dev
 
 jobs:
   deploy:
     name: Deploy to Netlify
-    needs: build
     runs-on:  ubuntu-18.04
     steps:
       - name: Download public directory
